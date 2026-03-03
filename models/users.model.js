@@ -1,5 +1,5 @@
 
-const mongoose = require('moongoose');
+const mongoose = require('mongoose');
 
 
 
@@ -19,4 +19,4 @@ const userSchema = mongoose.Schema({
     contact: Number,
     picture: String,
 });
-module.exports = mongoose.model('user', userSchema);
+module.exports = mongoose.models.user || mongoose.model('user', userSchema); 

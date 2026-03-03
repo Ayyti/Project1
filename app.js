@@ -22,8 +22,10 @@ app.use("/users", usersRouter);
 app.use("/products", productsRouter);
 
 
+// app.use(express.json());
+// app.use(express.urlencoded({ extended: true }));
 app.get("/", (req, res) => {
-    res.send("hey");
+    res.render("index");
 });
 
 app.listen(3000);

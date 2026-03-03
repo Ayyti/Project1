@@ -1,0 +1,325 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Scatch | Login & Register</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="bg-grey-100">
+        <div class="flex h-screen items-center justify-center  gap-10">
+
+        <div class= "bg-white p-8 rounded-lg shadow -md w-96">
+            <h2 class="text-2xl font-bold mb-5 text-blue-600">Create Account</h2> 
+            <form action="/users/register" method="POST" >
+                <input type="text" name="username" placeholder="Full Name" class ="w-full p-2 mb-3 border rounded" required>
+                <input type="email" name="email" placeholder="Email" class ="w-full p-2 mb-3 border rounded" required>
+                <input type="password" name="password" placeholder="Password" class ="w-full p-2 mb-3 border rounded" required>
+                <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">Sign Up</button>
+
+            </form>
+        </div> 
+        </div>
+      </body>
+</html> -->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scatch | You Got What You Want</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* Desaturated Black Background */
+        body { background-color: #111111; }
+        .brand-font { font-family: 'Syncopate', sans-serif; }
+    </style>
+</head>
+<body class="text-white">
+    <div class="flex flex-col h-screen items-center justify-center gap-6">
+        
+        <div class="text-center">
+            <h1 class="brand-font text-6xl tracking-tighter mb-1">SCATCH</h1>
+            <p class="text-purple-500 text-xs tracking-[0.6em] uppercase font-bold">
+                You got what you want
+            </p>
+        </div>
+
+        <div class="bg-zinc-900 p-10 rounded-2xl shadow-2xl w-96 border border-zinc-800">
+            <h2 class="text-xl font-semibold mb-6 text-zinc-400">Create Account</h2>
+            
+            <form action="/users/register" method="POST">
+                <input type="text" name="fullname" placeholder="Full Name" 
+                    class="w-full bg-zinc-800 p-3 mb-3 border border-zinc-700 rounded-lg text-white outline-none focus:border-purple-500 transition-all" required>
+                
+                <input type="email" name="email" placeholder="Email" 
+                    class="w-full bg-zinc-800 p-3 mb-3 border border-zinc-700 rounded-lg text-white outline-none focus:border-purple-500 transition-all" required>
+                
+                <input type="password" name="password" placeholder="Password" 
+                    class="w-full bg-zinc-800 p-3 mb-6 border border-zinc-700 rounded-lg text-white outline-none focus:border-purple-500 transition-all" required>
+                
+                <button type="submit" 
+                    class="w-full bg-purple-600 text-white font-bold py-3 rounded-lg hover:bg-purple-700 shadow-lg shadow-purple-900/20 transition-all">
+                    SIGN UP
+                </button>
+            </form>
+
+            <p class="mt-6 text-center text-zinc-500 text-sm">
+                Already have an account? <a href="#" class="text-purple-400 font-medium">Login</a>
+            </p>
+        </div>
+
+    </div>
+</body>
+</html> -->
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scatch | You Got What You Want</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* Desaturated Black with a subtle Purple Radial Gradient for depth */
+        body { 
+            background: radial-gradient(circle at center, #1a1a1a 0%, #111111 100%); 
+            min-height: 100vh;
+        }
+        .brand-font { font-family: 'Syncopate', sans-serif; }
+        
+        /* The Saturated Purple Accent Line */
+        .accent-line {
+            height: 2px;
+            width: 100%;
+            background: linear-gradient(90deg, transparent, #a855f7, transparent);
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body class="text-white overflow-hidden">
+    <div class="flex flex-col h-screen items-center justify-center gap-2">
+        
+        <div class="text-center mb-4">
+            <h1 class="brand-font text-7xl tracking-tighter mb-1 text-white">SCATCH</h1>
+            <p class="text-[#a855f7] text-xs tracking-[0.8em] uppercase font-black drop-shadow-[0_0_10px_rgba(168,85,247,0.5)]">
+                You got what you want
+            </p>
+        </div>
+
+        <div class="w-64 accent-line"></div>
+
+        <div class="bg-zinc-900/80 p-10 rounded-2xl shadow-2xl w-96 border-t-4 border-purple-600 backdrop-blur-md relative overflow-hidden">
+            <h2 class="text-xl font-semibold mb-6 text-zinc-300">Create Account</h2>
+            
+            <form action="/users/register" method="POST">
+                <input type="text" name="fullname" placeholder="Full Name" 
+                    class="w-full bg-zinc-800/50 p-3 mb-3 border border-zinc-700 rounded-lg text-white outline-none focus:border-purple-500 focus:bg-zinc-800 transition-all" required>
+                
+                <input type="email" name="email" placeholder="Email" 
+                    class="w-full bg-zinc-800/50 p-3 mb-3 border border-zinc-700 rounded-lg text-white outline-none focus:border-purple-500 focus:bg-zinc-800 transition-all" required>
+                
+                <input type="password" name="password" placeholder="Password" 
+                    class="w-full bg-zinc-800/50 p-3 mb-6 border border-zinc-700 rounded-lg text-white outline-none focus:border-purple-500 focus:bg-zinc-800 transition-all" required>
+                
+                <button type="submit" 
+                    class="w-full bg-purple-600 text-white font-black py-4 rounded-lg hover:bg-purple-500 shadow-[0_0_20px_rgba(168,85,247,0.3)] transition-all uppercase tracking-widest text-sm">
+                    Sign Up
+                </button>
+            </form>
+
+            <p class="mt-6 text-center text-zinc-500 text-xs">
+                Already have an account? <a href="#" class="text-purple-400 font-bold hover:text-white transition-colors">Login</a>
+            </p>
+        </div>
+
+    </div>
+</body>
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scatch | You Get What You Want</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* Desaturated Black Background */
+        body { 
+            background-color: #111111;
+            margin: 0;
+            overflow: hidden; /* Prevent scrollbars from the canvas */
+        }
+        
+        .brand-font { font-family: 'Syncopate', sans-serif; }
+        
+        /* The Saturated Purple Accent Line */
+        .accent-line {
+            height: 2px;
+            width: 100%;
+            background: linear-gradient(90deg, transparent, #a855f7, transparent);
+            margin-bottom: 2rem;
+        }
+
+        /* Container for the background canvas */
+        #particle-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Place it BEHIND everything else */
+        }
+
+        /* Make form elements semi-transparent so the web shows through slightly */
+        .form-box {
+            background-color: rgba(24, 24, 27, 0.8) !important; /* bg-zinc-900 with 80% opacity */
+            backdrop-blur: 8px; /* Simple blur for premium feel */
+        }
+    </style>
+</head>
+<body class="text-white relative">
+    
+    <canvas id="particle-canvas"></canvas>
+
+    <div class="flex flex-col h-screen items-center justify-center gap-2 relative z-10">
+        
+        <div class="text-center mb-4">
+            <h1 class="brand-font text-7xl tracking-tighter mb-1 text-white">DRESS-WELL</h1>
+            <p class="text-[#a855f7] text-xs tracking-[0.8em] uppercase font-black drop-shadow-[0_0_10px_rgba(168,85,247,0.5)]">
+                You get what you want
+            </p>
+        </div>
+
+        <div class="w-64 accent-line"></div>
+
+        <div class="form-box p-10 rounded-2xl shadow-2xl w-96 border border-zinc-800">
+            <h2 class="text-xl font-semibold mb-6 text-zinc-300">Create Account</h2>
+            
+            <form action="/users/register" method="POST">
+                <input type="text" name="fullname" placeholder="Full Name" 
+                    class="w-full bg-zinc-800/60 p-3 mb-3 border border-zinc-700 rounded-lg text-white outline-none focus:border-purple-500 focus:bg-zinc-800 transition-all" required>
+                
+                <input type="email" name="email" placeholder="Email" 
+                    class="w-full bg-zinc-800/60 p-3 mb-3 border border-zinc-700 rounded-lg text-white outline-none focus:border-purple-500 focus:bg-zinc-800 transition-all" required>
+                
+                <input type="password" name="password" placeholder="Password" 
+                    class="w-full bg-zinc-800/60 p-3 mb-6 border border-zinc-700 rounded-lg text-white outline-none focus:border-purple-500 focus:bg-zinc-800 transition-all" required>
+                
+                <button type="submit" 
+                    class="w-full bg-purple-600 text-white font-black py-4 rounded-lg hover:bg-purple-700 shadow-[0_0_20px_rgba(168,85,247,0.3)] transition-all uppercase tracking-widest text-sm">
+                    Register Now
+                </button>
+            </form>
+
+            <p class="mt-6 text-center text-zinc-500 text-xs">
+                Already have an account? <a href="#" class="text-purple-400 font-bold hover:text-white transition-colors">Login</a>
+            </p>
+        </div>
+
+    </div>
+
+    <script>
+        const canvas = document.getElementById('particle-canvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        let numParticles = 80;
+        let connectionDist = 120; // Maximum distance to draw a connecting line
+
+        // Resize the canvas to fit the window
+        function resize() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            particles = []; // Re-populate particles after resize to avoid screen artifacts
+            populateParticles();
+        }
+
+        // Create the particle "dots"
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                // Saturated Purple/Blue for neon pop
+                this.color = `rgba(168, 85, 247, ${Math.random() * 0.5 + 0.3})`; // Purple color
+                this.radius = Math.random() * 1.5 + 0.5; // Small particle size
+                this.speedX = (Math.random() - 0.5) * 0.3; // Slow speed
+                this.speedY = (Math.random() - 0.5) * 0.3; // Slow speed
+            }
+
+            // Draw the particle dot
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = this.color;
+                ctx.fill();
+            }
+
+            // Update particle position for animation
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+
+                // Simple wall bouncing
+                if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+                if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+            }
+        }
+
+        // Fill the screen with particles
+        function populateParticles() {
+            for (let i = 0; i < numParticles; i++) {
+                particles.push(new Particle());
+            }
+        }
+
+        // Draw connecting lines between close particles (The "Web")
+        function connectParticles() {
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+
+                    if (distance < connectionDist) {
+                        // The closer the particles, the brighter the line
+                        const opacity = 1 - (distance / connectionDist);
+                        ctx.beginPath();
+                        // Minimalist complementary color: desaturated cyan
+                        ctx.strokeStyle = `rgba(168, 85, 247, ${opacity * 0.15})`; // Desaturated cyan line
+                        ctx.lineWidth = 0.5;
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.stroke();
+                    }
+                }
+            }
+        }
+
+        // Main animation loop
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear the canvas before each frame
+            particles.forEach(p => {
+                p.update();
+                p.draw();
+            });
+            connectParticles();
+            requestAnimationFrame(animate); // Repeat the animation loop
+        }
+
+        // Initialize everything
+        window.addEventListener('resize', resize);
+        resize(); // Initial call to set size and populate particles
+        animate(); // Start the animation
+    </script>
+</body>
+</html>
