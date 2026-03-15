@@ -37,6 +37,7 @@ const jwt = require("jsonwebtoken"); // Why: To create a token for the user to s
 router.post("/register", async function (req, res) {
     try {
         let { email, password, fullname } = req.body;
+        console.log(req.body);
 
         // 1. Check if user already exists so we don't have duplicates
         let user = await userModel.findOne({ email: email });
@@ -68,6 +69,41 @@ router.post("/register", async function (req, res) {
     } catch (err) {
         res.send(err.message);
     }
+});
+
+
+// router.post("/Login", async function (req, res) {
+//     let user = await userModel.findOne({ email: email});
+//     if (!user)
+//         return res.status(401).send(" you are not a registered user, please sign in first.");
+
+//     bcrypt.compare(password, user.password, function (err, result) {
+//         if (err)
+//             return res.status(500).send("Server error, try again later.");
+//         if (!result)
+//             return res.status(401).send("Wrong password, try again.");
+    
+router.post("/login", async function (req, res) {
+    let { email, password } = req.body;
+    let user =  await userModel.findOne ({ email: email });
+    if (!user) 
+        return res.status(401).send("You are not a registered user, please sign in first.");
+
+
+
+
+    bcrypt.compare(password, user.password, async function (err, result) {
+        if (err) return res.status(500).send("Server error, try again later.");
+        if (!result) return res.status(401).send("Wrong password, try again.");
+    //. Generate the Token (The ID Card)
+                // "secretkey" is a private password only your server knows
+                let token = jwt.sign({ email: email }, "secretkey");
+
+                // 2. Set the Cookie in the browser
+                res.cookie("token", token);
+                res.send("You are now logged in!");
+    });
+
 });
 
 module.exports = router;
