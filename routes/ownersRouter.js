@@ -1,5 +1,8 @@
 const express = require('express');
 const router = express.Router();
+const productModel = require ('../models/product.model');
+const loggedIn = require("../utils/LoggedIn");
+
 
 const ownerModel =  require('../models/owner.model');
 
@@ -34,4 +37,28 @@ router.get('/', (req, res) => {
 
 //console.log("ROUTER FILE LOADED");
 //if(process.env)
+
+router.post("/create-product", async (req, res) => {
+    try {
+    let { image, name, price, discount, bgcolor, panelcolor, textcolor, quantity, product_description } = req.body;
+ 
+    let createdProduct = await productModel.create({
+        image,
+        name,
+        price,
+        discount,
+        bgcolor, 
+        quantity,
+        
+    });
+
+
+    res.status(201).send("Product created successfully");   
+    } catch (err) {
+        res.status(500).send("Server error, try again later.");
+    }   
+
+})
+
+
 module.exports = router;
