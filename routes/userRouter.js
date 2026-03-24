@@ -97,7 +97,7 @@ router.post("/login", async function (req, res) {
         if (!result) return res.status(401).send("Wrong password, try again.");
     //. Generate the Token (The ID Card)
                 // "secretkey" is a private password only your server knows
-                let token = jwt.sign({ email: email }, "secretkey");
+                let token = jwt.sign({ email: email , id: user._id}, "secretkey");
 
                 // 2. Set the Cookie in the browser
                 res.cookie("token", token);

@@ -3,6 +3,7 @@ const dbgr = require('debug')('development:mongoose');
 const config = require('config');
 mongoose.connect(config.get("MONGODB_URI"))
     .then(() => {
+        console.log("Success: cloud database is live");
     dbgr("Connected to MongoDB");
 })
 .catch((err) => {

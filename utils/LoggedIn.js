@@ -8,9 +8,10 @@ function loggedIn(req, res, next) {
         jwt.verify(token, "secretkey", function (err, decoded) {
             if (err) 
                 return res.status(402).send("Invalid token, please login again.");
-        });
+        
             req.user = decoded;
             next();
+});
         
     }
     catch (err) {

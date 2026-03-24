@@ -7,6 +7,7 @@ const path = require('path');
 const ownersRouter = require("./routes/ownersRouter");
 const usersRouter = require("./routes/userRouter");
 const productsRouter = require("./routes/productRouter");
+const cartRouter = require("./routes/cartRouter");
 
 const db = require("./config/mongoose-connection");
 app.use(express.json());
@@ -20,6 +21,7 @@ app.set('view engine', 'ejs');
 app.use("/owner", ownersRouter);
 app.use("/users", usersRouter);
 app.use("/products", productsRouter);
+app.use("/cart", cartRouter);
 
 
 // app.use(express.json());
