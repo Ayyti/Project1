@@ -57,7 +57,8 @@ router.post("/register", async function (req, res) {
 
 // 1. Generate the Token (The ID Card)
                 // "secretkey" is a private password only your server knows
-                let token = jwt.sign({ email: email, id: newUser._id }, "secretkey");
+                //let token = jwt.sign({ email: email, id: newUser._id }, "secretkey");
+                let token = jwt.sign({ email: email, id: newUser._id }, process.env.JWT_KEY || "secretkey");
 
                 // 2. Set the Cookie in the browser
                 res.cookie("token", token);
